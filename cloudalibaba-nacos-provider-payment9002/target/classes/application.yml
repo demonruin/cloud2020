@@ -1,0 +1,17 @@
+server:
+  port: 9002
+
+spring:
+  application:
+    name: nacos-provider-payment
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+#暴露所有端点,和actuator监控有关
+management:
+  endpoints:
+    web:
+      exposure:
+        exclude: "*"

@@ -1,0 +1,6 @@
+/Users/king/workspace/cloud2020/cloudalibaba-nacos-consumer-order83/src/main/java/com/king/springcloud/config/RestTemplateConfig.java
+/Users/king/workspace/cloud2020/cloudalibaba-nacos-consumer-order83/src/main/java/com/king/springcloud/NacosConsumerOrderMain83.java
+/Users/king/workspace/cloud2020/cloudalibaba-nacos-consumer-order83/src/main/java/com/king/springcloud/service/PaymentServiceFallback.java
+/Users/king/workspace/cloud2020/cloudalibaba-nacos-consumer-order83/src/main/java/com/king/springcloud/controller/CircleBreakerController.java
+/Users/king/workspace/cloud2020/cloudalibaba-nacos-consumer-order83/src/main/java/com/king/springcloud/controller/OrderController.java
+/Users/king/workspace/cloud2020/cloudalibaba-nacos-consumer-order83/src/main/java/com/king/springcloud/service/PaymentService.java

@@ -1,0 +1,55 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true  #开启从注册中心动态创建路由的功能，利用微服务名进行路由
+      routes:
+        - id: payment_routh1 #路由的ID，没有固定规则但要求唯一，建议配合服务名
+          uri: lb://cloud-payment-service  #uri以lb://开头（lb代表从注册中心获取服务)
+#          uri: http://localhost:8001   #匹配后提供服务的路由地址
+#          filters:
+#            - AddRequestHeader=X-Request-red, blue #就是举个例子 此清单将X-Request-red:blue标头添加到所有匹配请求的下游请求的标头中。
+          predicates:
+            - Path=/payment/get/**   #断言,路径相匹配的进行路由
+#            - Weight=group2, 8
+
+        - id: payment_routh2 #路由的ID，没有固定规则但要求唯一，建议配合服务名
+          uri: lb://cloud-payment-service  #uri以lb://开头（lb代表从注册中心获取服务)
+#          uri: http://localhost:8001   #匹配后提供服务的路由地址
+          predicates:
+            - Path=/payment/lb/**   #断言,路径相匹配的进行路由
+#            - After=2020-04-23T15:45:46.581+08:00[Asia/Shanghai]  #此时间点后才能访问
+#            - Before=2020-04-23T18:45:46.581+08:00[Asia/Shanghai]  #此时间点前才能访问
+#            - Between=2020-04-23T15:45:46.581+08:00[Asia/Shanghai],2020-04-24T15:45:46.581+08:00[Asia/Shanghai]  #datetime1和datetime2区间请求可访问。datetime2参数必须是后于datetime1
+#            - Cookie=username,king #请求服务需要带cookie，此处可使用curl来进行测试 curl http://localhost:9527/payment/lb --Cookie "username=king"
+#            - Header=X-Request-Id, \d+ #请求服务需要带header，请求头要有X-Request-Id属性并且值为整数的正则表达式 curl http://localhost:9527/payment/lb -H "X-Request-Id:1234"
+#            - Host=**.somehost.org,**.anotherhost.org #请求头中的header中需要包含host的内容为somehost.org等这些 curl http://localhost:9527/payment/lb -H "host:www.anotherhost.org" 或 curl http://localhost:9527/payment/lb -H "host:www.somehost.org"
+#            - Method=POST  #请求为post请求 curl http://localhost:9527/payment/lb  -X POST
+#            - Query=username, \d+ #要有参数名称并且是正整数才能路由  没演示成功 curl http://localhost:9527/payment/lb?username=1,但是浏览器输入请求这个地址成功测试完成
+#            - RemoteAddr=192.168.1.1/24   #需要ip在1-24区间的可以访问通过，比如 192.168.1.10
+#            - Weight=group1, 2 #这条路线会将大约80％的流量转发到上边儿，将大约20％的流量转发到这里，与其他配合服务使用。
+
+eureka:
+  client:
+    #表示是否将自己注册进EurekaServer默认为true。
+    register-with-eureka: true
+    #是否从EurekaServer抓取已有的注册信息，默认为true。单节点无所谓，集群必须设置为true才能配合ribbon使用负载均衡
+    fetchRegistry: true
+    service-url:
+      #单机
+      defaultZone: http://localhost:7001/eureka
+      # 集群
+      #defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
+  instance:
+    instance-id: gateway9527
+    prefer-ip-address: true  #访问路径可以显示ip地址
+    #Eureka客户端向服务端发送心跳的时间间隔，单位为秒（默认30s）
+    #lease-renewal-interval-in-seconds: 1
+    #Eureka服务端在收到最后一次心跳后等待时间上限，单位为秒（默认90s，超时将剔除服务
+    #lease-expiration-duration-in-seconds: 2

@@ -1,0 +1,7 @@
+com/king/springcloud/controller/StorageController.class
+com/king/springcloud/service/StorageService.class
+com/king/springcloud/domain/CommonResult.class
+com/king/springcloud/domain/Storage.class
+com/king/springcloud/SeataStorageMain2002.class
+com/king/springcloud/service/impl/StorageServiceImpl.class
+com/king/springcloud/dao/StorageDao.class

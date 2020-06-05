@@ -1,0 +1,7 @@
+/Users/king/workspace/cloud2020/cloud-consumer-order80/src/main/java/com/king/springcloud/OrderMain80.java
+/Users/king/workspace/cloud2020/cloud-consumer-order80/src/main/java/com/king/springcloud/config/ApplicationContextConfig.java
+/Users/king/workspace/cloud2020/cloud-consumer-order80/src/main/java/com/king/springcloud/lb/MyLb.java
+/Users/king/workspace/cloud2020/cloud-consumer-order80/src/main/java/com/king/springcloud/controller/LbController.java
+/Users/king/workspace/cloud2020/cloud-consumer-order80/src/main/java/com/king/springcloud/lb/MyLoadBalancer.java
+/Users/king/workspace/cloud2020/cloud-consumer-order80/src/main/java/com/king/myrule/MyRule.java
+/Users/king/workspace/cloud2020/cloud-consumer-order80/src/main/java/com/king/springcloud/controller/OrderController.java

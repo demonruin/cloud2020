@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cloud-consumer-openfeign-order80" />
+        <module name="cloud-api-commons" />
+        <module name="cloud-stream-rabbitmq-consumer8803" />
+        <module name="cloud-stream-rabbitmq-consumer8802" />
+        <module name="cloud-config-client3366" />
+        <module name="cloud-provider-payment8001" />
+        <module name="cloud-config-client3355" />
+        <module name="cloudalibaba-nacos-consumer-order83" />
+        <module name="cloud-consumer-orderzk80" />
+        <module name="cloudalibaba-seata-order-service2001" />
+        <module name="cloud-consumer-feign-hystrix-order80" />
+        <module name="cloudalibaba-seata-account-service2003" />
+        <module name="cloudalibaba-nacos-provider-payment9002" />
+        <module name="cloudalibaba-nacos-provider-payment9001" />
+        <module name="cloud-config-center3344" />
+        <module name="cloud-gateway-gateway9527" />
+        <module name="cloud-provider-payment8002" />
+        <module name="cloud-provider-paymentConsul8005" />
+        <module name="cloud-stream-rabbitmq-provider8801" />
+        <module name="cloud-eureka-server7003" />
+        <module name="cloud-eureka-server7002" />
+        <module name="cloud-eureka-server7001" />
+        <module name="cloudalibaba-seata-storage-service2002" />
+        <module name="cloudalibaba-nacos-config-client3377" />
+        <module name="cloud-consumer-hystrix-dashboard9001" />
+        <module name="cloud-consumer-order80" />
+        <module name="cloudalibaba-sentinel-service8401" />
+        <module name="cloud" />
+        <module name="cloud-provider-hystrix-payment8001" />
+        <module name="cloud-provider-paymentzk8004" />
+        <module name="cloud-consumer-orderconsul80" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="cloudz-test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

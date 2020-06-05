@@ -1,0 +1,4 @@
+/Users/king/workspace/cloud2020/cloud-consumer-feign-hystrix-order80/src/main/java/com/king/springcloud/controller/OrderFeignHystrixController.java
+/Users/king/workspace/cloud2020/cloud-consumer-feign-hystrix-order80/src/main/java/com/king/springcloud/service/FallbackServiceHandler.java
+/Users/king/workspace/cloud2020/cloud-consumer-feign-hystrix-order80/src/main/java/com/king/springcloud/service/OrderFeignHystrixService.java
+/Users/king/workspace/cloud2020/cloud-consumer-feign-hystrix-order80/src/main/java/com/king/springcloud/OrderFeignHystrixMain80.java
